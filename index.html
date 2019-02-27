@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<style type="text/css">
+		.grid-container{
+		display:grid;
+		grid-template-columns: auto auto auto;
+		border: 1px solid black;
+		padding: 25px;
+		}
+		
+		.main_header{
+		text-align: center;
+		font-size: 64px;
+		font-family: "Raleway";
+		}
+		#Caesar_cipher{
+		display:block;
+		width:250px;
+		height:125px;
+		margin-left: auto;
+		margin-right: auto;
+		}
+		#substitution_cypher{
+		display:block;
+		width:250px;
+		height:125px;
+		margin-left: auto;
+		margin-right: auto;
+		}
+	</style>
+
+	<head>
+		<title>SET08101 - Javascript Cyphers</title>
+		<script type="text/javascript" src="placeholder.js"></script>
+		<script type="text/javascript" src="Caesar_cipher.js"></script>
+		<script type="text/javascript" src="substitution_cypher.js"></script>
+		<script type="text/javascript" src="changecipher.js"></script>
+	</head>
+
+	<body>
+		<div class = "main_header">
+			Cyphers to be used
+		</div>	
+		
+		<div class = "grid-container">
+			<div class = "cypher1">
+				The first cypher that will be used is a simple caesar cipher. This will allow you to enter your text and move the whole alphabet by a value that you chose.
+			</div>
+			<div class = "cypher2">
+				The second cypher that will be used is a simple substituion  cipher where you will either make a code for it to follow or randomise it and get a code that should show you which letter now corresponds to the real alphabet 
+			</div>	
+			<div>
+			</div>
+			<div class = "caesar_cipher_image">
+				<img id ="Caesar_cipher" src="Caesar_cipher.png">
+			</div>
+	
+			<div class = "substitution_cypher_image">
+				<img id ="substitution_cypher" src="substitution_cypher.jpg">
+			</div>
+			<div>
+			</div>
+			<div>
+				<select id = "selectbox" onchange="changecipher();">
+					<option value="1">Placeholder</option>
+					<option value="2">Caesar cipher</option>
+					<option value="3">substitution cypher</option>
+				</select>
+			</div>
+		</div>	
+		
+	</body>
+</html>
