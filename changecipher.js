@@ -18,7 +18,7 @@ function testadding0(){
 
 function testadding1(){
 	document.getElementById("output").innerHTML = "<p><input type='text' id='inputtext' value=''>enter text you want encrypted or decrypted</p>"
-	document.getElementById("output").innerHTML += "<p><input type='text' id='inputkey' value=''>enter how many times you want the alphabet offset(key)</p>"
+	document.getElementById("output").innerHTML += "<p><input type='text' id='inputkey' value=''>enter how many times you want the alphabet offset(key)(can be positive or negative)</p>"
 	document.getElementById("output").innerHTML += "<button onclick='Caesar()'>values ready?</button>"
 }
 function testadding2(){

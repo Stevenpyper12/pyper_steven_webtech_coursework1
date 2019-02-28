@@ -19,15 +19,36 @@ function Caesar_encrypt(plaintext,key){
 	plaintext = plaintext.toUpperCase();
 	var message = "encrypting the text - " + plaintext + "with a key of -" + key;
 	document.getElementById("outputsoutput").innerHTML = message;
-	ciphertext = "";
+	var ciphertext = "";
+	var newletter = "";
 	
-	for(i = 0; i < plaintext.length; i++)
+	for(ch in plaintext)
 	{
-		//alert(plaintext.charAt(i));
-		if(charset.includes(plaintext.charAt(i)))
+		//alert(plaintext[ch]);
+		if(charset.includes(plaintext[ch]))
 		{
-			alert(plaintext.charAt(i));
+			var newcharposition = +charset.indexOf(plaintext[ch]) + +key;
+			if(newcharposition >= numchars)
+			{
+				newletter=charset.charAt(newcharposition-numchars);
+			}else
+			if(newcharposition < 0)
+			{
+				newletter=charset.charAt(numchars + newcharposition);
+			}				
+			else
+			{
+				newletter=charset.charAt(newcharposition);
+			}
+		}else
+		if(plaintext[ch] == " ")
+		{
+			continue;
+		}else
+		{
+			newletter=plaintext[ch];
 		}
+		ciphertext = ciphertext+newletter;	
 	}
-
+	document.getElementById("outputsoutput").innerHTML = "encrypted message is :" +ciphertext;
 }
