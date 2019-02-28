@@ -7,7 +7,6 @@
 		border: 1px solid black;
 		padding: 25px;
 		}
-		
 		.main_header{
 		text-align: center;
 		font-size: 64px;
@@ -32,6 +31,8 @@
 	<head>
 		<title>SET08101 - Javascript Cyphers</title>
 		<script type="text/javascript" src="changecipher.js"></script>
+		<script type="text/javascript" src="Caesar_cipher.js"></script>
+		<script type="text/javascript" src="substitution_cypher.js"></script>
 	</head>
 
 	<body>
@@ -57,7 +58,7 @@
 			</div>
 			<div>
 			</div>
-			<div id="output">
+			<div>
 				<select id = "selectbox" onchange="changecipher();">
 					<option value="1">Placeholder</option>
 					<option value="2">Caesar cipher</option>
@@ -65,6 +66,9 @@
 				</select>
 			</div>
 		</div>	
-		
+		<div id="output">
+		</div>
+		<div id="outputsoutput">
+		</div>
 	</body>
 </html>
