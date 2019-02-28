@@ -86,7 +86,7 @@ function Caesar_decrypt(){
 function Caesar_crack(){
 	ciphertext = document.getElementById("inputtext").value;
 	ciphertext = ciphertext.toUpperCase();
-	var message = "attempting to crack the text - " + ciphertext + "with all keys" + key;
+	var message = "attempting to crack the text - " + ciphertext + "with all keys";
 	document.getElementById("outputsoutput").innerHTML = message;
 	
 	var plaintext = "";
