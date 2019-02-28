@@ -11,6 +11,9 @@ function Caesar(type){
 	if(type == '1'){
 		Caesar_decrypt();
 	}
+	else{
+		Caesar_crack();
+	}
 }
 
 function Caesar_encrypt(plaintext,key){
@@ -39,10 +42,6 @@ function Caesar_encrypt(plaintext,key){
 			{
 				newletter=charset.charAt(newcharposition);
 			}
-		}else
-		if(plaintext[ch] == " ")
-		{
-			continue;
 		}else
 		{
 			newletter=plaintext[ch];
@@ -82,4 +81,37 @@ function Caesar_decrypt(){
 	}
 	document.getElementById("outputsoutput").innerHTML = "decrypted message is :" +plaintext;
 
+}
+
+function Caesar_crack(){
+	ciphertext = document.getElementById("inputtext").value;
+	ciphertext = ciphertext.toUpperCase();
+	var message = "attempting to crack the text - " + ciphertext + "with all keys" + key;
+	document.getElementById("outputsoutput").innerHTML = message;
+	
+	var plaintext = "";
+	var newletter = "";
+	
+	for(key in charset)
+	{
+		for(ch in ciphertext)
+		{
+			if(charset.includes(ciphertext[ch]))
+			{
+				var newcharposition = +charset.indexOf(ciphertext[ch]) - +key;
+				if(newcharposition < 0)
+				{
+					newletter=charset.charAt(newcharposition+numchars);
+				}else
+				{
+				newletter=charset.charAt(newcharposition);
+				}
+			}else{
+				newletter= ciphertext[ch]
+			}
+			plaintext = plaintext+newletter;	
+		}
+		plaintext =plaintext + "<br>" ;
+		document.getElementById("outputsoutput").innerHTML = "decrypted message is :" +plaintext;
+	}
 }

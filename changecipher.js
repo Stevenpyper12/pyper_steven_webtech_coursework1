@@ -21,6 +21,7 @@ function testadding1(){
 	document.getElementById("output").innerHTML += "<p><input type='text' id='inputkey' value=''>enter how many times you want the alphabet offset(key)(can be positive or negative,your key is the exact same for encrpytion and decyption(6 while encryption and 6 while decypting )</p>"
 	document.getElementById("output").innerHTML += "<button onclick='Caesar(\"0\")'>Encrypt</button>"
 	document.getElementById("output").innerHTML += "<button onclick='Caesar(\"1\")'>Decrypt(key Known)</button>"
+	document.getElementById("output").innerHTML += "<button onclick='Caesar(\"2\")'>Decrypt(key not Known)</button>"
 
 }
 function testadding2(){
