@@ -3,7 +3,6 @@ numchars= charset.length;
 
 function Caesar(type){
 	//document.getElementById("output").innerHTML = "<p>this is a different test</p>"
-	alert(type)
 	//defines how many shifts there should be to the chararcter set
 	if(type == '0')
 	{
@@ -25,7 +24,6 @@ function Caesar_encrypt(plaintext,key){
 	
 	for(ch in plaintext)
 	{
-		//alert(plaintext[ch]);
 		if(charset.includes(plaintext[ch]))
 		{
 			var newcharposition = +charset.indexOf(plaintext[ch]) + +key;
