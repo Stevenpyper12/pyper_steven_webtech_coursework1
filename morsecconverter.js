@@ -84,7 +84,11 @@ function texttomorse()
 			morsetext=morsetext+ " "
 		}
 	}
-	document.getElementById("outputsoutput").innerHTML = "the morse text is " + morsetext 
+	 
+	document.getElementById("outputsoutput").innerHTML = "the morse text is :" + morsetext 
+	test = document.getElementById("outputsoutput").value
+	test=test.split(":")
+	alert(test[0])
 
 }
 
@@ -131,7 +135,7 @@ function morsetotext()
 	*/
 	}
 	plaintext=plaintext+morsemap.get(singlemorse)
-	document.getElementById("outputsoutput").innerHTML = "the plaintext is " + plaintext 
+	document.getElementById("outputsoutput").innerHTML = "the plaintext is :" + plaintext 
 
 }
 
