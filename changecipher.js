@@ -13,7 +13,7 @@ function changecipher(){
 		Subsititionselected();
 	}else
 	{
-		
+		Morseselected();
 	}
 }
 
@@ -32,4 +32,12 @@ function Subsititionselected(){
 	document.getElementById("output").innerHTML += "<p><input type='text' id='inputtext' value=''> enter the text you want converted </p>"
 	document.getElementById("output").innerHTML += "<button onclick='Subsitition(\"0\")'>Setup New Alphabet and encrypt</button>"	
 	document.getElementById("output").innerHTML += "<button onclick='Subsitition(\"1\")'>setup old alphabet and decrypt</button>"	
+}
+
+function Morseselected(){
+	document.getElementById("output").innerHTML = "<p><input type='text' id='inputtext' value=''> enter the text you want converted into morse</p>"
+	document.getElementById("output").innerHTML += "<p><input type='text' id='inputtext' value=''> enter the morse you want converted into text</p>"
+	document.getElementById("output").innerHTML += "<button onclick='morse(\"0\")'>convert text to morse</button>"	
+	document.getElementById("output").innerHTML += "<button onclick='morse(\"1\")'>convert morse to text</button>"	
+	
 }
