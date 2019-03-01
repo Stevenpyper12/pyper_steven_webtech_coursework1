@@ -89,7 +89,7 @@ function Caesar_crack(){
 	var message = "attempting to crack the text - " + ciphertext + "with all keys";
 	document.getElementById("outputsoutput").innerHTML = message;
 	
-	var plaintext = "";
+	var plaintext = "<br>";
 	var newletter = "";
 	
 	for(key in charset)
