@@ -16,7 +16,7 @@ function Caesar(type){
 	}
 }
 
-function Caesar_encrypt(plaintext,key){
+function Caesar_encrypt(){
 	key = document.getElementById("inputkey").value;
 	plaintext = document.getElementById("inputtext").value;
 	plaintext = plaintext.toUpperCase();
