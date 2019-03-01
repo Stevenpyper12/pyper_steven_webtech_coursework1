@@ -4,19 +4,17 @@ function changecipher(){
 	document.getElementById("outputsoutput").innerHTML = ""
 	var selectedCypher = document.getElementById("selectbox").selectedIndex;
 	if(selectedCypher == 0){
-		testadding0();
 	}else
 	if(selectedCypher == 1){
 		Caesarselected();
 	}else
+	if(selectedCypher == 2)	
 	{
 		Subsititionselected();
+	}else
+	{
+		
 	}
-}
-
-function testadding0(){
-	document.getElementById("output").innerHTML = "<p>this is a test</p>"
-	alert("adding")
 }
 
 function Caesarselected(){
@@ -29,10 +27,9 @@ function Caesarselected(){
 }
 
 function Subsititionselected(){
-	document.getElementById("output").innerHTML = "<p><input type='text' id='orginalalpha' value=''> Enter Your proper Alphabet(no duplicates)</p>"
+	document.getElementById("output").innerHTML = "<p><input type='text' id='orginalalpha' value=''> Enter th Alphabet(no duplicates)</p>"
 	document.getElementById("output").innerHTML += "<p><input type='text' id='newalpha' value=''> Enter Your version of the Alphabet(no duplicates)</p>"
 	document.getElementById("output").innerHTML += "<p><input type='text' id='inputtext' value=''> enter the text you want converted </p>"
-	
-	document.getElementById("output").innerHTML += "<button onclick='Subsitition(\"0\")'>Setup New Alphabet</button>"	
-
+	document.getElementById("output").innerHTML += "<button onclick='Subsitition(\"0\")'>Setup New Alphabet and encrypt</button>"	
+	document.getElementById("output").innerHTML += "<button onclick='Subsitition(\"1\")'>setup old alphabet and decrypt</button>"	
 }
