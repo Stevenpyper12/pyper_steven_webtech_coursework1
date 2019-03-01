@@ -36,8 +36,8 @@ function Subsititionselected(){
 
 function Morseselected(){
 	document.getElementById("output").innerHTML = "<p><input type='text' id='inputtext' value=''> enter the text you want converted into morse</p>"
-	document.getElementById("output").innerHTML += "<p><input type='text' id='inputtext' value=''> enter the morse you want converted into text</p>"
+	document.getElementById("output").innerHTML += "<p><input type='text' id='inputmorse' value=''> enter the morse you want converted into text</p>"
 	document.getElementById("output").innerHTML += "<button onclick='morse(\"0\")'>convert text to morse</button>"	
 	document.getElementById("output").innerHTML += "<button onclick='morse(\"1\")'>convert morse to text</button>"	
-	
+	document.getElementById("output").innerHTML += "<button onclick='morse(\"2\")'>play converted morse as sound</button>"	
 }
