@@ -1,13 +1,101 @@
-		.grid-container{
-		display:grid;
-		grid-template-columns: auto auto auto;
-		border: 1px solid black;
-		padding: 25px;
-		}
+		
 		.main_header{
-		text-align: center;
-		font-size: 64px;
-		font-family: "Raleway";
+			text-align: center;
+			font-size: 64px;
+			font-family: "Raleway";
+		}
+		.grid-container{
+			display:grid;
+			grid-template-columns: 30% 40% 30%;
+			grid-template-rows: repeat(6, 200px);
+		
+		}
+		.cypher1{
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid row-end: 2;
+		}
+		.cypher2{
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid row-end: 3;
+		}
+		.caesar_cipher_image{
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid row-end: 2;
+		}
+		.substitution_cypher_image{
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 2;
+			grid row-end: 3;
+		}
+		.selection{
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 3;
+			grid row-end: 4;	
+		}
+		#output{
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 3;
+			grid row-end: 4;	
+		}
+		#outputsoutput{
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 3;
+			grid row-end: 4;		
+		}
+		#Caesar_cipher{
+			display:block;
+			width:250px;
+			height:125px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#substitution_cypher{
+			display:block;
+			width:250px;
+			height:125px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/*
+		.cypher1{
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 2;
+		grid row-end: 3;
+		}
+		.cypher2{
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 3;
+		grid row-end: 4;
+		}
+		.caesar_cipher_image{
+		grid-column-start: 4;
+		grid-column-end: 6;
+		grid-row-start: 2;
+		grid row-end: 3;
+		}
+		.substitution_cypher_image{
+		grid-column-start: 4;
+		grid-column-end: 6;
+		grid-row-start: 3;
+		grid row-end: 4;
+		}
+		.selection{
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 2;
+		grid row-end: 4;
 		}
 		#Caesar_cipher{
 		display:block;
@@ -23,3 +111,4 @@
 		margin-left: auto;
 		margin-right: auto;
 		}
+		*/
