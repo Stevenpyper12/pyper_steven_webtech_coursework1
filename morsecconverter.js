@@ -110,26 +110,7 @@ function morsetotext()
 		{
 			singlemorse = singlemorse+morsetext[ch]
 		}
-		/* 
-		if(morsetext[ch] == "&nbsp")
-		{
-			if(morsetext[ch-1] == "&nbsp" )
-			{
-				plaintext=plaintext+morsemap.get(singlemorse)
-				continue
-			}else
-			{
-				plaintext = plaintext + " "
-			}
-		}else
-		if(morsetext[ch]== " "){
-			plaintext=plaintext+morsemap.get(singlemorse)
-			singlemorse= ""
-		}else
-		{
-			singlemorse = singlemorse+morsetext[ch]
-		}
-	*/
+
 	}
 	plaintext=plaintext+morsemap.get(singlemorse)
 	document.getElementById("outputsoutput").innerHTML = "the plaintext is :" + plaintext 
@@ -146,7 +127,7 @@ function playmorse()
 	var morsetext = document.getElementById("inputmorse").value.toUpperCase();
 	var i = 0;
 	var soundjustplayed = 0;
-	var counter = 1000;
+
 	var dashjustplayed = 0;
 	
 	var isfinished = setInterval(function()
@@ -159,7 +140,7 @@ function playmorse()
 			}else
 			{
 			oscillator.frequency.value = 0;
-			//isfinished = setInterval(function,5000);
+			
 			soundjustplayed = 0;
 			dashjustplayed = 0;
 			}
@@ -175,17 +156,17 @@ function playmorse()
 				if(morsetext[i] == ".")
 				{
 					oscillator.frequency.value = 1000;
-					//isfinished = setInterval(function{},500);
+					
 					
 				}else
 				if(morsetext[i] == "-"){
 					oscillator.frequency.value = 500;
-					//isfinished = setInterval(function,5000);
+					
 					
 				}else
 				{
 					oscillator.frequency.value = 0;
-					//isfinished = setInterval(function,10000);
+					
 					
 				}
 			}
@@ -193,114 +174,6 @@ function playmorse()
 			soundjustplayed = 1;
 		}
 	},500)
-	
+	oscillator.pause()
 }	
 
-
-	
-	
-	
-	/*for(ch in morsetext)
-	{
-		//alert(morsetext[ch]);
-		if(morsetext[ch] == ".")
-		{
-			timeoutthing(".",1000,oscillator)
-		}else
-		if(morsetext[ch] == "-")
-		{
-			timeoutthing("-",1000,oscillator)
-			
-		}else
-		{
-			timeoutthing(" ",1000,oscillator)
-		}
-	}
-
-
-}*/
-/*
-function timeoutthing(oscillator)
-{
-	setTimeout(playsound,1000)
-
-}
-function playsound(character,oscillator)
-{
-	if(character == ".")
-	{
-		oscillator.frequency.value = 1000;
-		
-	}else
-	if(character == "-"){
-		oscillator.frequency.value = 500;
-		
-	}else
-	{
-		oscillator.frequency.value = 0;
-	}
-}
-*/ 
-	
-/*
-function playmorse(){
-	
-	var context = new (window.AudioContext || window.webkitAudioContext)();
-	var dottime = 100;
-	var dashtime = 300;
-	var soundpitch = 550;
-	var dashsound = ToneSound(context,dashtime,soundpitch);
-	var source = context.createBufferSource();
-	var source2 = context.createBufferSource();
-	source.buffer = dashsound;
-	source.connect(context.destination)
-	var dottime = ToneSound(context,dottime,soundpitch)
-	source2.buffer = dottime;
-	source2.connect(context.destination)
-	var allmorse = [];
-	source.volume = 0;
-	source2.volume = 0;
-	source.start(0);
-	source2.start(0);
-	
-	
-	var morsetext = document.getElementById("inputmorse").value.toUpperCase();
-	for(ch in morsetext)
-	{
-		//alert(morsetext[ch]);
-		if(morsetext[ch] == ".")
-		{
-			source.volume = 0.5;
-			setTimeout(1000)
-			source.volume = 0;
-		}else
-		if(morsetext[ch] == "-"){
-			source2.volume = 0.5;
-			setTimeout(1000)
-			source.volume = 0;
-		}else
-		{
-			setTimeout(1000)
-		}
-	}
-	
-	
-}
-function ToneSound(context,time,pitch)
-{
-	var time = 100000;
-	var soundbuffer = context.createBuffer(1,time,context.sampleRate);
-	var data = soundbuffer.getChannelData(0);
-	var frequency = pitch/context.sampleRate
-	for(var i = 0;i < time;i++)
-	{
-		data[i] = Math.sin(frequency * i)
-	}
-	return soundbuffer;
-	
-}
-
-
-
-
-*/
