@@ -26,8 +26,6 @@ function Caesarselected(){
 function Subsititionselected(){
 	document.getElementById("methodselection").innerHTML = "<select id = 'selectmethodbox' onchange='changemethod();'><option value='0' selected disabled>Please Chose Your Cipher Method</option><option value='1'>Encrypt</option><option value='2'>Decrypt</option></select>"
 /*
-	document.getElementById("output").innerHTML = "<p><input type='text' id='orginalalpha' value=''> Enter th Alphabet(no duplicates)</p>"
-	document.getElementById("output").innerHTML += "<p><input type='text' id='newalpha' value=''> Enter Your version of the Alphabet(no duplicates)</p>"
 	document.getElementById("output").innerHTML += "<p><input type='text' id='inputtext' value=''> enter the text you want converted </p>"
 	document.getElementById("output").innerHTML += "<button onclick='Subsitition(\"0\")'>Setup New Alphabet and encrypt</button>"	
 	document.getElementById("output").innerHTML += "<button onclick='Subsitition(\"1\")'>setup old alphabet and decrypt</button>"	
@@ -35,9 +33,12 @@ function Subsititionselected(){
 }
 
 function Morseselected(){
+	document.getElementById("methodselection").innerHTML = "<select id = 'selectmethodbox' onchange='changemethod();'><option value='0' selected disabled>Please Chose Your Cipher Method</option><option value='1'>Convert To Morse</option><option value='2'>Convert To Text</option></select>"
+/*
 	document.getElementById("output").innerHTML = "<p><input type='text' id='inputtext' value=''> enter the text you want converted into morse</p>"
 	document.getElementById("output").innerHTML += "<p><input type='text' id='inputmorse' value=''> enter the morse you want converted into text</p>"
 	document.getElementById("output").innerHTML += "<button onclick='morse(\"0\")'>convert text to morse</button>"	
 	document.getElementById("output").innerHTML += "<button onclick='morse(\"1\")'>convert morse to text</button>"	
 	document.getElementById("output").innerHTML += "<button onclick='morse(\"2\")'>play converted morse as sound</button>"	
+*/
 }

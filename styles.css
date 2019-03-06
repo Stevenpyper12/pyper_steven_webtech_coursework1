@@ -1,38 +1,52 @@
+		body{
+			background-color: #1c75bc;
+			
+			
+		}
 		
 		.main_header{
 			text-align: center;
 			font-size: 64px;
 			font-family: "Raleway";
+			padding: 20px;
+		}
+		.navbar{
+			overflow: hidden;
+			background-color: rgba(255, 255, 255, .8);
 		}
 		.grid-container{
 			display:grid;
-			grid-template-columns: 30% 40% 30%;
-			grid-template-rows: repeat(6, 200px);
+			grid-template-columns: repeat(10,10%);
+			grid-template-rows: repeat(10, 100px);
 		
 		}
 		.cypher1{
-			grid-column-start: 1;
-			grid-column-end: 2;
+			margin: 10px;
+			grid-column-start: 4;
+			grid-column-end: 6;
 			grid-row-start: 1;
 			grid row-end: 2;
 		}
 		.cypher2{
-			grid-column-start: 1;
-			grid-column-end: 2;
-			grid-row-start: 2;
-			grid row-end: 3;
+			margin: 10px;
+			grid-column-start: 4;
+			grid-column-end: 6;
+			grid-row-start: 3;
+			grid row-end: 4;
 		}
 		.caesar_cipher_image{
-			grid-column-start: 2;
+			margin: 10px;
+			grid-column-start: 1;
 			grid-column-end: 3;
 			grid-row-start: 1;
 			grid row-end: 2;
 		}
 		.substitution_cypher_image{
-			grid-column-start: 2;
+			margin: 10px;
+			grid-column-start: 1;
 			grid-column-end: 3;
-			grid-row-start: 2;
-			grid row-end: 3;
+			grid-row-start: 3;
+			grid row-end: 4;
 		}
 		.selection{
 			grid-column-start: 1;

@@ -54,6 +54,10 @@ var alphamap = new Map()
 .set("Y","-.--")
 .set("Z","--..")
 
+//var context = new (window.AudioContext || window.webkitAudioContext)();
+//var oscillator = context.createOscillator();
+var context
+var oscillator
 function morse(type)
 {
 	if(type == '0')
@@ -64,8 +68,11 @@ function morse(type)
 	{
 		morsetotext()
 	}else
-	{
+	if(type == '2'){
 		playmorse()
+	}else
+	{
+		oscillator.stop()
 	}
 }
 
@@ -86,7 +93,7 @@ function texttomorse()
 	}
 	 
 	document.getElementById("outputsoutput").innerHTML = "the morse text is :" + morsetext 
-
+	return morsetext;
 
 }
 
@@ -119,12 +126,21 @@ function morsetotext()
 
 function playmorse()
 {
-	var context = new (window.AudioContext || window.webkitAudioContext)();
-	var oscillator = context.createOscillator();
+	context = new (window.AudioContext || window.webkitAudioContext)();
+	oscillator = context.createOscillator();
 	oscillator.connect(context.destination);
 	oscillator.frequency.value = 0;
 	oscillator.start(0);
-	var morsetext = document.getElementById("inputmorse").value.toUpperCase();
+	var morsetext = "";
+	try{
+		var morsetext = document.getElementById("inputmorse").value.toUpperCase();
+	}
+	catch{
+		if(morsetext == "")
+		{
+			morsetext = texttomorse();
+		}
+	}
 	var i = 0;
 	var soundjustplayed = 0;
 	
@@ -149,8 +165,7 @@ function playmorse()
 			if(i >= morsetext.length)
 			{
 				oscillator.frequency.value = 0;
-				alert("clearing interval");
-				clearInterval(isfinished);
+				oscillator.stop()
 				clearInterval(isfinished);
 			}else
 			{
@@ -176,7 +191,5 @@ function playmorse()
 			soundjustplayed = 1;
 		}
 	},500)
-	alert(audioCtx.currentTime + morsetext.length + (morsetext.length * 0.1 ))
-	oscillator.stop(audioCtx.currentTime + morsetext.length + (morsetext.length * 0.1 ))
 }	
 

@@ -16,12 +16,12 @@ function changemethod()
 		if(selectedmethod == 2){
 			document.getElementById("output").innerHTML = "<p><input type='text' id='inputtext' value=''>enter text you want decrypted</p>"
 			document.getElementById("output").innerHTML += "<p><input type='text' id='inputkey' value=''>enter the key used to encrypt the text</p>"
-			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"1\")'>Decrypt(key Known)</button></p>"
+			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"1\")'>Decrypt</button></p>"
 	
 		}else
 		{
 			document.getElementById("output").innerHTML = "<p><input type='text' id='inputtext' value=''>enter text you want to try and decrypt</p>"
-			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"2\")'>Decrypt(key not Known)</button></p>"
+			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"2\")'>Crack</button></p>"
 		}
 	}else
 	if(selectedCypher == 2)	
@@ -42,6 +42,19 @@ function changemethod()
 		}
 	}else
 	{
-		Morseselected();
+		if(selectedmethod == 1)
+		{
+			document.getElementById("output").innerHTML = "<p><input type='text' id='inputtext' value=''> enter the text you want converted into morse</p>"
+			document.getElementById("output").innerHTML += "<button onclick='morse(\"0\")'>convert text to morse</button>"	
+			document.getElementById("output").innerHTML += "<button onclick='morse(\"2\")'>play converted morse as sound</button>"	
+			document.getElementById("output").innerHTML += "<button onclick='morse(\"3\")'>Stop Sound</button>"	
+		}else
+		{
+			document.getElementById("output").innerHTML = "<p><input type='text' id='inputmorse' value=''> enter the morse you want converted into text</p>"
+			document.getElementById("output").innerHTML += "<button onclick='morse(\"1\")'>convert morse to text</button>"	
+			document.getElementById("output").innerHTML += "<button onclick='morse(\"2\")'>play morse as sound</button>"	
+			document.getElementById("output").innerHTML += "<button onclick='morse(\"3\")'>Stop Sound</button>"	
+		}			
+		
 	}
 }
