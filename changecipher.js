@@ -20,16 +20,18 @@ function changecipher(){
 
 function Caesarselected(){
 	document.getElementById("methodselection").innerHTML = "<select id = 'selectmethodbox' onchange='changemethod();'><option value='0' selected disabled>Please Chose Your Cipher Method</option><option value='1'>Encrypt</option><option value='2'>Decrypt</option><option value='3'>Crack</option></select>"
-	//document.getElementById("output").innerHTML += "<button onclick='Caesar(\"2\")'>Decrypt(key not Known)</button>"
 
 }
 
 function Subsititionselected(){
+	document.getElementById("methodselection").innerHTML = "<select id = 'selectmethodbox' onchange='changemethod();'><option value='0' selected disabled>Please Chose Your Cipher Method</option><option value='1'>Encrypt</option><option value='2'>Decrypt</option></select>"
+/*
 	document.getElementById("output").innerHTML = "<p><input type='text' id='orginalalpha' value=''> Enter th Alphabet(no duplicates)</p>"
 	document.getElementById("output").innerHTML += "<p><input type='text' id='newalpha' value=''> Enter Your version of the Alphabet(no duplicates)</p>"
 	document.getElementById("output").innerHTML += "<p><input type='text' id='inputtext' value=''> enter the text you want converted </p>"
 	document.getElementById("output").innerHTML += "<button onclick='Subsitition(\"0\")'>Setup New Alphabet and encrypt</button>"	
 	document.getElementById("output").innerHTML += "<button onclick='Subsitition(\"1\")'>setup old alphabet and decrypt</button>"	
+*/
 }
 
 function Morseselected(){
