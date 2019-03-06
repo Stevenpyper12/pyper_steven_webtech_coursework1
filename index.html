@@ -7,6 +7,7 @@
 		<script type="text/javascript" src="Caesar_cipher.js"></script>
 		<script type="text/javascript" src="substitution_cypher.js"></script>
 		<script type="text/javascript" src="morsecconverter.js"></script>
+		<script type="text/javascript" src="changemethod.js"></script>
 	</head>
 
 	<body>
@@ -28,14 +29,15 @@
 			<div class = "substitution_cypher_image">
 				<img id ="substitution_cypher" src="substitution_cypher.jpg">
 			</div>
-			<div class = "selection">
+			<div id="selection" class = "selection">
 				<select id = "selectbox" onchange="changecipher();">
-					<option value="0"></option>
+					<option value="0" selected disabled>Please Pick a Cipher</option>
 					<option value="1">Caesar cipher</option>
 					<option value="2">substitution cypher</option>
-					<option value="3">Morse Code</option>
-					
+					<option value="3">Morse Code</option>	
 				</select>
+			</div>
+			<div id="methodselection">
 			</div>
 			<div id="output">
 			</div>

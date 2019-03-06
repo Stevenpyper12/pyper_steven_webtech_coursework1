@@ -127,7 +127,7 @@ function playmorse()
 	var morsetext = document.getElementById("inputmorse").value.toUpperCase();
 	var i = 0;
 	var soundjustplayed = 0;
-
+	
 	var dashjustplayed = 0;
 	
 	var isfinished = setInterval(function()
@@ -149,13 +149,15 @@ function playmorse()
 			if(i >= morsetext.length)
 			{
 				oscillator.frequency.value = 0;
+				alert("clearing interval");
+				clearInterval(isfinished);
 				clearInterval(isfinished);
 			}else
 			{
 			
 				if(morsetext[i] == ".")
 				{
-					oscillator.frequency.value = 1000;
+					oscillator.frequency.value = 500;
 					
 					
 				}else
@@ -174,6 +176,7 @@ function playmorse()
 			soundjustplayed = 1;
 		}
 	},500)
-	oscillator.pause()
+	alert(audioCtx.currentTime + morsetext.length + (morsetext.length * 0.1 ))
+	oscillator.stop(audioCtx.currentTime + morsetext.length + (morsetext.length * 0.1 ))
 }	
 
