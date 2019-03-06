@@ -1,0 +1,25 @@
+	@import url('https://fonts.googleapis.com/css?family=Raleway');
+	body{
+		font-family: 'Raleway', sans-serif;
+		font-size:16px;
+		background:lightblue;
+		text-align:center;
+	}
+	.main_header{
+		font-size:32px;
+		font-weight:bold
+	}
+	.grid-container{
+		display:grid;
+		grid-template-rows: 400px;
+		grid-template-columns: auto auto;
+		grid-template-areas: none;
+		grid-auto-flow: initial;
+		grid-auto-rows: initial;
+		grid-auto-columns: initial;
+		grid-gap: 20px;
+		padding: 15px;
+		
+	}
+
+	

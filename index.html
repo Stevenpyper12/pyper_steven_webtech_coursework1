@@ -14,40 +14,49 @@
 		<div class = "main_header">
 			Cyphers to be used
 		</div>	
-			<div class="navbar">
+		<div class="navbar">
 			<a href="">Home</a>
 			<a href="Ceaser.html">Ceaser Cipher</a>
 			<a href="substitution.html">Subsituation Cipher</a>
 			<a href="Morse.html">Morse Code</a>
-			</div>
+		</div>
 		<div class = "grid-container">
-			<div class = "cypher1">
-				The first cypher that will be used is a simple caesar cipher. This will allow you to enter your text and move the whole alphabet by a value that you chose.
+			<div class = "firstCipherStuff">
+				<div class = "cypher1">
+					The first cypher that will be used is a simple caesar cipher. This will allow you to enter your text and move the whole alphabet by a value that you chose.
+				</div>
+				<div class = "caesar_cipher_image">
+					<img id ="Caesar_cipher" src="Caesar_cipher.png">
+				</div>
+				
 			</div>
-			
-			<div class = "cypher2">
-				The second cypher that will be used is a simple substituion  cipher where you will either make a code for it to follow or randomise it and get a code that should show you which letter now corresponds to the real alphabet 
-			</div>	
-			<div class = "caesar_cipher_image">
-				<img id ="Caesar_cipher" src="Caesar_cipher.png">
+			<div class = "secondCipherStuff">
+				<div class = "cypher2">
+					The second cypher that will be used is a simple substituion  cipher where you will either make a code for it to follow or randomise it and get a code that should show you which letter now corresponds to the real alphabet 
+				</div>
+				<div class = "substitution_cypher_image">
+					<img id ="substitution_cypher" src="substitution_cypher.jpg">
+				</div>				
 			</div>
-	
-			<div class = "substitution_cypher_image">
-				<img id ="substitution_cypher" src="substitution_cypher.jpg">
+			<div class = "choices">
+				<div id="selection" class = "selection">
+				Here you can choose which cipher you would like to use and how you would like to use it<br>
+					<select id = "selectbox" onchange="changecipher();">
+						<option value="0" selected disabled>Please Pick a Cipher</option>
+						<option value="1">Caesar cipher</option>
+						<option value="2">substitution cypher</option>
+						<option value="3">Morse Code</option>	
+					</select>
+				</div>
+				<div id="methodselection">
+				</div>
 			</div>
-			<div id="selection" class = "selection">
-				<select id = "selectbox" onchange="changecipher();">
-					<option value="0" selected disabled>Please Pick a Cipher</option>
-					<option value="1">Caesar cipher</option>
-					<option value="2">substitution cypher</option>
-					<option value="3">Morse Code</option>	
-				</select>
-			</div>
-			<div id="methodselection">
-			</div>
-			<div id="output">
-			</div>
-			<div id="outputsoutput">
+			<div class = "outputs">
+				Here you can enter values that will be used in the cipher<br>
+				<div id="output">
+				</div>
+				<div id="outputsoutput">
+				</div>
 			</div>
 		</div>	
 		
