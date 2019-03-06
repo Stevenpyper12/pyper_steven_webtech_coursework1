@@ -29,7 +29,7 @@ function changemethod()
 		if(selectedmethod == 1)
 		{
 			document.getElementById("output").innerHTML = "<p>Enter the proper version of the alphabet(no duplicates)<br><input type='text' id='orginalalpha' value=''></p>"
-			document.getElementById("output").innerHTML += "<p>Enter Your version of the Alphabet(key)(no duplicates)<input type='text' id='newalpha' value=''></p>"
+			document.getElementById("output").innerHTML += "<p>Enter Your version of the Alphabet(key)(no duplicates)<br><input type='text' id='newalpha' value=''></p>"
 			document.getElementById("output").innerHTML += "<p>enter the text you want converted<br><input type='text' id='inputtext' value=''></p>"
 			document.getElementById("output").innerHTML += "<p><button onclick='Subsitition(\"0\")'>Setup New Alphabet and encrypt</button></p>"	
 		}else

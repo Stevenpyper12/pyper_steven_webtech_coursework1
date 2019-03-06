@@ -4,6 +4,7 @@
 		font-size:16px;
 		background:lightblue;
 		text-align:center;
+		margin:5px;
 	}
 	.main_header{
 		font-size:32px;
@@ -11,7 +12,7 @@
 	}
 	.grid-container{
 		display:grid;
-		grid-template-rows: 400px;
+		grid-template-rows: 350px;
 		grid-template-columns: auto auto;
 		grid-template-areas: none;
 		grid-auto-flow: initial;
@@ -21,6 +22,7 @@
 		padding: 15px;
 		
 	}
+	
 	#Caesar_cipher{
 		display:block;
 		max-width:75%;
@@ -30,9 +32,10 @@
 		width:auto;
 		height:auto
 	}
+
 	#substitution_cypher{
 		display:block;
-		max-width:75%;
+		max-width:65%;
 		margin-left: auto;
 		margin-right: auto;
 		object-fit: contain;
