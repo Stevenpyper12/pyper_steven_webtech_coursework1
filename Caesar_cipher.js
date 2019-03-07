@@ -1,23 +1,38 @@
 charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 numchars= charset.length;
 
-function Caesar(type){
+function Caesar(type,key){
 	//document.getElementById("output").innerHTML = "<p>this is a different test</p>"
 	//defines how many shifts there should be to the chararcter set
-	if(type == '0')
+	if(key == 0)
 	{
-		Caesar_encrypt();
+		if(type == '3')
+		{
+			Caesar_encrypt(13);
+		}else
+		if(type == '4'){
+			Caesar_decrypt(13);
+		}
 	}else
-	if(type == '1'){
-		Caesar_decrypt();
-	}
-	else{
-		Caesar_crack();
+	{
+		if(type == '0')
+		{
+			Caesar_encrypt(0);
+		}else
+		if(type == '1'){
+			Caesar_decrypt(0);
+		}
+		else{
+			Caesar_crack();
+		}
 	}
 }
 
-function Caesar_encrypt(){
-	key = document.getElementById("inputkey").value;
+function Caesar_encrypt(key){
+	if(key == 0)
+	{
+		key = document.getElementById("inputkey").value;
+	}
 	plaintext = document.getElementById("inputtext").value;
 	plaintext = plaintext.toUpperCase();
 	var message = "encrypting the text - " + plaintext + "with a key of -" + key;
@@ -51,8 +66,11 @@ function Caesar_encrypt(){
 	document.getElementById("outputsoutput").innerHTML = "encrypted message is :" +ciphertext;
 }
 
-function Caesar_decrypt(){
-	key = document.getElementById("inputkey").value;
+function Caesar_decrypt(key){
+	if(key == 0)
+	{
+		key = document.getElementById("inputkey").value;
+	}
 	ciphertext = document.getElementById("inputtext").value;
 	ciphertext = ciphertext.toUpperCase();
 	var message = "decrypting the text - " + ciphertext + "with a key of -" + key;

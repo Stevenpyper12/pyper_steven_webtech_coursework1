@@ -19,7 +19,7 @@ function changecipher(){
 }
 
 function Caesarselected(){
-	document.getElementById("methodselection").innerHTML = "<select id = 'selectmethodbox' onchange='changemethod();'><option value='0' selected disabled>Please Chose Your Cipher Method</option><option value='1'>Encrypt</option><option value='2'>Decrypt</option><option value='3'>Crack</option></select>"
+	document.getElementById("methodselection").innerHTML = "<select id = 'selectmethodbox' onchange='changemethod();'><option value='0' selected disabled>Please Chose Your Cipher Method</option><option value='1'>Encrypt</option><option value='2'>Decrypt</option><option value='3'>Crack</option><option value='4'>ROT13 Encrypt</option><option value='5'>ROT13 Decrypt</option></select>"
 
 }
 

@@ -2,6 +2,7 @@ function changemethod()
 {
 	var selectedmethod = document.getElementById("selectmethodbox").value;
 	var selectedCypher = document.getElementById("selectbox").selectedIndex;
+	//GOOD IDEA FOR SPLITING THIS PER PAGE WOULD BE TO USE A || TITLE = " CIPHER NAME"
 	if(selectedCypher == 0){
 	}else
 	if(selectedCypher == 1){
@@ -10,18 +11,28 @@ function changemethod()
 		{
 			document.getElementById("output").innerHTML = "<p>enter text you want encrypted<br><input type='text' id='inputtext' value=''></p>"
 			document.getElementById("output").innerHTML += "<p>enter how many times you want the alphabet offset(key)<br><input type='text' id='inputkey' value=''></p>"
-			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"0\")'>Encrypt</button></p>"
+			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"0\",1)'>Encrypt</button></p>"
 
 		}else
 		if(selectedmethod == 2){
 			document.getElementById("output").innerHTML = "<p>enter text you want decrypted<br><input type='text' id='inputtext' value=''></p>"
 			document.getElementById("output").innerHTML += "<p>enter the key used to encrypt the text<br><input type='text' id='inputkey' value=''></p>"
-			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"1\")'>Decrypt</button></p>"
+			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"1\",1)'>Decrypt</button></p>"
 	
 		}else
-		{
+		if(selectedmethod == 3){
 			document.getElementById("output").innerHTML = "<p>enter text you want to try and decrypt<br><input type='text' id='inputtext' value=''></p>"
-			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"2\")'>Crack</button></p>"
+			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"2\",1)'>Crack</button></p>"
+		}else
+		if(selectedmethod == 4){
+			document.getElementById("output").innerHTML = "<p>enter text you want encrypted<br><input type='text' id='inputtext' value=''></p>"
+			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"3\",0)'>Encrypt</button></p>"
+
+		}
+		else
+		{
+			document.getElementById("output").innerHTML = "<p>enter text you want decrypted<br><input type='text' id='inputtext' value=''></p>"
+			document.getElementById("output").innerHTML += "<p><button onclick='Caesar(\"4\",0)'>Decrypt</button></p>"
 		}
 	}else
 	if(selectedCypher == 2)	
