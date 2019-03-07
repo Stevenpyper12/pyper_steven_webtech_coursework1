@@ -1,7 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+	body{
+		font-family: 'Raleway', sans-serif;
+		font-size:16px;
+		background:#292826;
+		color:white
+		
+	}
+	a{
+		color:Blue
+	}
+	a:visited{
+		color:#aaaaaa
+	}
+	a:hover{
+		color:lightBlue
+	}
 	.Grid_Layout{
 			display:grid;
 			grid-template-columns: auto auto;
 			grid-template-rows: auto auto;
 			margin:5px;
 			grid-gap: 25px;
+			
 	}
+	.Page_Header{
+		text-align:center;
+		font-size:32px;
+		font-weight:bold;
+		margin:25px;
+		background:#f9d342;
+	}
+	.Nav_Bar{
+		background:#FBE27D;
+		
+	}
+	
