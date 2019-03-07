@@ -92,7 +92,7 @@ function texttomorse()
 		}
 	}
 	 
-	document.getElementById("outputsoutput").innerHTML = "the morse text is :" + morsetext 
+	document.getElementById("Output_Area").innerHTML = "the morse text is :" + morsetext 
 	return morsetext;
 
 }
@@ -120,7 +120,7 @@ function morsetotext()
 
 	}
 	plaintext=plaintext+morsemap.get(singlemorse)
-	document.getElementById("outputsoutput").innerHTML = "the plaintext is :" + plaintext 
+	document.getElementById("Output_Area").innerHTML = "the plaintext is :" + plaintext 
 
 }
 
@@ -159,7 +159,6 @@ function playmorse()
 			}else
 			{
 			oscillator.frequency.value = 0;
-			
 			soundjustplayed = 0;
 			dashjustplayed = 0;
 			}

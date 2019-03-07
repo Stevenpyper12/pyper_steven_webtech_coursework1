@@ -36,7 +36,7 @@ function Caesar_encrypt(key){
 	plaintext = document.getElementById("inputtext").value;
 	plaintext = plaintext.toUpperCase();
 	var message = "encrypting the text - " + plaintext + "with a key of -" + key;
-	document.getElementById("outputsoutput").innerHTML = message;
+	document.getElementById("Output_Area").innerHTML = message;
 	var ciphertext = "";
 	var newletter = "";
 	
@@ -63,7 +63,7 @@ function Caesar_encrypt(key){
 		}
 		ciphertext = ciphertext+newletter;	
 	}
-	document.getElementById("outputsoutput").innerHTML = "encrypted message is :" +ciphertext;
+	document.getElementById("Output_Area").innerHTML = "encrypted message is :" +ciphertext;
 }
 
 function Caesar_decrypt(key){
@@ -74,7 +74,7 @@ function Caesar_decrypt(key){
 	ciphertext = document.getElementById("inputtext").value;
 	ciphertext = ciphertext.toUpperCase();
 	var message = "decrypting the text - " + ciphertext + "with a key of -" + key;
-	document.getElementById("outputsoutput").innerHTML = message;
+	document.getElementById("Output_Area").innerHTML = message;
 	var plaintext = "";
 	var newletter = "";
 	
@@ -97,7 +97,7 @@ function Caesar_decrypt(key){
 		}
 		plaintext = plaintext+newletter;	
 	}
-	document.getElementById("outputsoutput").innerHTML = "decrypted message is :" +plaintext;
+	document.getElementById("Output_Area").innerHTML = "decrypted message is :" +plaintext;
 
 }
 
@@ -105,7 +105,7 @@ function Caesar_crack(){
 	ciphertext = document.getElementById("inputtext").value;
 	ciphertext = ciphertext.toUpperCase();
 	var message = "attempting to crack the text - " + ciphertext + "with all keys";
-	document.getElementById("outputsoutput").innerHTML = message;
+	document.getElementById("Output_Area").innerHTML = message;
 	
 	var plaintext = "<br>";
 	var newletter = "";
@@ -130,6 +130,6 @@ function Caesar_crack(){
 			plaintext = plaintext+newletter;	
 		}
 		plaintext =plaintext + "<br>" ;
-		document.getElementById("outputsoutput").innerHTML = "decrypted message is :" +plaintext;
+		document.getElementById("Output_Area").innerHTML = "decrypted message is :" +plaintext;
 	}
 }

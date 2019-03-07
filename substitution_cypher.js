@@ -1,4 +1,3 @@
-
 function Subsitition(type){
 	var alphamap = new Map();
 	if(type == '0')
@@ -50,7 +49,7 @@ function Subsitition_encrypt(alphamap){
 			encryptedtext=encryptedtext+alphamap.get(plaintext[ch])
 		}
 	}
-	document.getElementById("outputsoutput").innerHTML = "the encrypted text is " + encryptedtext 
+	document.getElementById("Output_Area").innerHTML = "the encrypted text is " + encryptedtext 
 }
 	
 function Subsitition_decrypt(alphamap){	
@@ -66,7 +65,7 @@ function Subsitition_decrypt(alphamap){
 			plaintext=plaintext+alphamap.get(encryptedtext[ch])
 		}
 	}
-	document.getElementById("outputsoutput").innerHTML = "the decrypted text is " + plaintext 
+	document.getElementById("Output_Area").innerHTML = "the decrypted text is " + plaintext 
 
 }
 	
