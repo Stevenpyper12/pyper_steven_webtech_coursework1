@@ -65,7 +65,7 @@ function changemethod()
 				document.getElementById("InputArea").innerHTML += "<button onclick='morse(\"3\")'>Stop Sound</button>"	
 			}else
 			{
-				document.getElementById("InputArea").innerHTML = "<p>enter the morse you want converted into text<br><input type='text' id='inputmorse' value=''></p>"
+				document.getElementById("InputArea").innerHTML = "<p>enter the morse you want converted into text<br>between each letter leave one space, between words leave 3 spaces! for example .- .-&nbsp;&nbsp;&nbsp.- will translate to AA A<br><input type='text' id='inputmorse' value=''></p>"
 				document.getElementById("InputArea").innerHTML += "<button onclick='morse(\"1\")'>convert morse to text</button>"	
 				document.getElementById("InputArea").innerHTML += "<button onclick='morse(\"2\")'>play morse as sound</button>"	
 				document.getElementById("InputArea").innerHTML += "<button onclick='morse(\"3\")'>Stop Sound</button>"	
