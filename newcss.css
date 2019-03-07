@@ -32,6 +32,12 @@
 	}
 	.Nav_Bar{
 		background:#FBE27D;
-		
+		text-align:center;
+		font-weight:bold;
+		margin:15px;
+	}
+	.Output_Area{
+		text-align:center;
+		margin:24px;
 	}
 	
