@@ -1,5 +1,4 @@
-<!--script partially based off https://stackoverflow.com/questions/3487263/how-to-use-onclick-or-onselect-on-option-tag-in-a-jsp-page -->
-		
+
 function Subsitition(type){
 	var alphamap = new Map();
 	if(type == '0')
