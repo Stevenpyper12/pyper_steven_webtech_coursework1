@@ -36,3 +36,39 @@
 		font-weight:bold;
 		margin:15px;
 	}
+	#CaesarInfo{
+		border: 1px solid #000000;
+		background:rgba(249, 211, 66, 0.2);
+	}
+	#CaesarStrengths{
+		border: 1px solid #000000;
+		background:rgba(249, 211, 66, 0.2);
+	}
+	#CaesarWeaknesses{
+		border: 1px solid #000000;
+		background:rgba(249, 211, 66, 0.2);
+	}
+	#SubsitutionInfo{
+		border: 1px solid #000000;
+		background:rgba(249, 211, 66, 0.2);
+	}
+	#SubsituationStrenghts{
+		border: 1px solid #000000;
+		background:rgba(249, 211, 66, 0.2);
+	}
+	#SubsituationWeaknesses{
+		border: 1px solid #000000;
+		background:rgba(249, 211, 66, 0.2);
+	}
+	#MorseInfo{
+		border: 1px solid #000000;
+		background:rgba(249, 211, 66, 0.2);
+	}
+	#MorseStrengths{
+		border: 1px solid #000000;	
+		background:rgba(249, 211, 66, 0.2);		
+	}
+	#MorseWeaknesses{
+		border: 1px solid #000000;
+		background:rgba(249, 211, 66, 0.2);
+	}

@@ -38,6 +38,31 @@
 	}
 	.Output_Area{
 		text-align:center;
-		margin:24px;
+		margin:24px;	
+	}
+	#firstimage{
+		object-fit:contain;
+		width:100%;
+		max-height:70%;
+	}
+	#CipherInfo{
+		background:rgba(249, 211, 66, 0.4);
+		border: 1px solid #000000;
+	}	
+	#CipherHelp{
+		background:rgba(249, 211, 66, 0.4);
+		border: 1px solid #000000;
+	}
+	#MethodSelector{
+		text-align:center;
+		border: 1px solid #000000;
+	}	
+	#InputArea{
+		border: 1px solid #000000;
+		text-align:center;
+	}
+	#Output_Area{
+		background:rgba(249, 211, 66, 0.8);
+		border: 1px solid #000000;
 	}
 	
