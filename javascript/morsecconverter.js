@@ -1,3 +1,4 @@
+//two maps defined globally as they are basically used for everything
 var morsemap = new Map()
 .set(".-","A")
 .set("-...","B")
@@ -24,7 +25,7 @@ var morsemap = new Map()
 .set(".--","W")
 .set("-..-","X")
 .set("-.--","Y")
-.set("--..","Z")
+.set("--..","Z");
 
 var alphamap = new Map()
 .set("A",".-")
@@ -52,76 +53,112 @@ var alphamap = new Map()
 .set("W",".--")
 .set("X","-..-")
 .set("Y","-.--")
-.set("Z","--..")
+.set("Z","--..");
 
 //var context = new (window.AudioContext || window.webkitAudioContext)();
 //var oscillator = context.createOscillator();
-var context
-var oscillator
+//context and oscillator also declared globally as they are useful throughout the entire of the morseconverter
+var context;
+var oscillator;
+var undefinedfound = 0;
 function morse(type)
 {
+	//allows the user to make the choices from teh buttons
 	if(type == '0')
 	{
-		texttomorse()
+		texttomorse();
 	}else
 	if(type == '1')
 	{
-		morsetotext()
+		morsetotext();
 	}else
 	if(type == '2'){
-		playmorse()
+		playmorse();
 	}else
 	{
-		oscillator.stop()
+		oscillator.stop();
 	}
 }
-
+//converts users input text into morsecode
 function texttomorse()
 {
+	undefinedfound = 0
 	var plaintext = document.getElementById("inputtext").value.toUpperCase();
-	var morsetext = ""
+	var morsetext = "";
+	//goes through every character in plaintext and will convert it into morse code and add spaces so that if it played as sound it is deblt with properly
 	for(ch in plaintext)
 	{
 		if(plaintext[ch] == " ")
 		{
-			morsetext = morsetext + "&nbsp;&nbsp;"
+			//as browsers tend to shrink double spaces this method was used to get aorund it
+			morsetext = morsetext + "&nbsp;&nbsp;";
 		}else
 		{
-			morsetext=morsetext+alphamap.get(plaintext[ch])
-			morsetext=morsetext+ " "
+			//checks if a character is not in the alphabet mapped tree meaning it would be undefined and not have a associated value
+			if(alphamap.get(plaintext[ch]) == undefined)
+			{
+				undefinedfound = 1;
+				morsetext=morsetext+alphamap.get(plaintext[ch]);
+				morsetext=morsetext+ " ";
+			}else
+			{
+				morsetext=morsetext+alphamap.get(plaintext[ch]);
+				morsetext=morsetext+ " ";
+			}
 		}
 	}
-	 
-	document.getElementById("Output_Area").innerHTML = "the morse text is :" + morsetext 
+	 //prints ot the output and alerts the user if there was any issues
+	document.getElementById("Output_Area").innerHTML = "the morse text is :" + morsetext;
+	if(undefinedfound == 1)
+	{
+		alert("one of the characters you entered is invalid,this will be displayed as undefined in your output!");
+	}
 	return morsetext;
 
 }
-
+//somewhat similar to the text to morse this converts morse into text
 function morsetotext()
 {
-	var plaintext = ""
+	undefinedfound = 0
+	var plaintext = "";
 	var morsetext = document.getElementById("inputmorse").value.toUpperCase();
-	var singlemorse = ""
+	var singlemorse = "";
+	
+	//has to go through every character and sort them into letters and words and also if a space is actually a space or should be double space
 	for(ch in morsetext)
 	{
 		if(morsetext[ch] == " " && morsetext[+ch - +1] == " ")
 		{
-			plaintext=plaintext+" "
+			//if it was a double space it will add a actual space 
+			plaintext=plaintext+" ";
 		}
 		else
 		if(morsetext[ch] == " ")
 		{
-			plaintext=plaintext+morsemap.get(singlemorse)
-			singlemorse=""
+			//if it was a single space it  means that it was seperating a letter rather than a word and as such has to go through find the full morse letter and convert it to the actual letter
+			if(morsemap.get(singlemorse) == undefined)
+			{
+				undefinedfound =1;
+				plaintext=plaintext+morsemap.get(singlemorse);
+				singlemorse="";
+			}else
+			{
+				plaintext=plaintext+morsemap.get(singlemorse);
+				singlemorse="";
+			}
 		}else
 		{
-			singlemorse = singlemorse+morsetext[ch]
+			singlemorse = singlemorse+morsetext[ch];
 		}
 
 	}
-	plaintext=plaintext+morsemap.get(singlemorse)
-	document.getElementById("Output_Area").innerHTML = "the plaintext is :" + plaintext 
-
+	//deals with thje very last character which does not ahve a space after it and as such will not have been added to the plain text
+	plaintext=plaintext+morsemap.get(singlemorse);
+	document.getElementById("Output_Area").innerHTML = "the plaintext is :" + plaintext;
+	if(undefinedfound == 1)
+	{
+		alert("one of the morse codes you enter is invalid,this will be displayed as undefined in your output!");
+	}
 }
 
 function playmorse()
@@ -129,8 +166,8 @@ function playmorse()
 	context = new (window.AudioContext || window.webkitAudioContext)();
 	oscillator = context.createOscillator();
 	var gainNode = context.createGain();
-	oscillator.connect(gainNode)
-	gainNode.connect(context.destination)
+	oscillator.connect(gainNode);
+	gainNode.connect(context.destination);
 	oscillator.frequency.value = 0;
 	gainNode.gain.value = 0.05;
 	oscillator.start(0);
@@ -167,7 +204,7 @@ function playmorse()
 			if(i >= morsetext.length)
 			{
 				oscillator.frequency.value = 0;
-				oscillator.stop()
+				oscillator.stop();
 				clearInterval(isfinished);
 			}else
 			{
@@ -189,9 +226,9 @@ function playmorse()
 					
 				}
 			}
-			i++
+			i++;
 			soundjustplayed = 1;
 		}
-	},500)
+	},500);
 }	
 
