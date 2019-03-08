@@ -2,18 +2,18 @@
 	body{
 		font-family: 'Raleway', sans-serif;
 		font-size:16px;
-		background:#292826;
-		color:white
+		background:rgba(197, 239, 247, 1);
+		color:rgba(36, 37, 42, 1);
 		
 	}
 	a{
-		color:Blue
+		color:white;
 	}
 	a:visited{
-		color:#aaaaaa
+		color:#gray;
 	}
 	a:hover{
-		color:lightBlue
+		color:lightBlue;
 	}
 	.Grid_Layout{
 		display:grid;
@@ -21,14 +21,16 @@
 		grid-template-rows: auto auto auto;
 		margin:5px;
 		grid-gap: 25px;
-			
+		background:rgba(65, 131, 215, 1);
+		color:white;
 	}
 	.Page_Header{
 		text-align:center;
 		font-size:32px;
 		font-weight:bold;
 		margin:25px;
-		background:#f9d342;
+		background:rgba(107, 185, 240, 1);
+		color:white;
 	}
 	.Nav_Bar{
 		background:#FBE27D;
@@ -36,39 +38,41 @@
 		font-weight:bold;
 		margin:15px;
 	}
+	
 	#CaesarInfo{
 		border: 1px solid #000000;
-		background:rgba(249, 211, 66, 0.4);
+		/*background:rgba(249, 211, 66, 0.4);*/
 	}
 	#CaesarStrengths{
 		border: 1px solid #000000;
-		background:rgba(249, 211, 66, 0.4);
+		/*background:rgba(249, 211, 66, 0.4);*/
 	}
 	#CaesarWeaknesses{
 		border: 1px solid #000000;
-		background:rgba(249, 211, 66, 0.4);
+		/*background:rgba(249, 211, 66, 0.4);*/
 	}
 	#SubsitutionInfo{
 		border: 1px solid #000000;
-		background:rgba(249, 211, 66, 0.4);
+		/*background:rgba(249, 211, 66, 0.4);*/
 	}
 	#SubsituationStrenghts{
 		border: 1px solid #000000;
-		background:rgba(249, 211, 66, 0.4);
+		/*background:rgba(249, 211, 66, 0.4);*/
 	}
 	#SubsituationWeaknesses{
 		border: 1px solid #000000;
-		background:rgba(249, 211, 66, 0.4);
+		/*background:rgba(249, 211, 66, 0.4);*/
 	}
 	#MorseInfo{
 		border: 1px solid #000000;
-		background:rgba(249, 211, 66, 0.4);
+		/*background:rgba(249, 211, 66, 0.4);*/
 	}
 	#MorseStrengths{
 		border: 1px solid #000000;	
-		background:rgba(249, 211, 66, 0.4);		
+		/*background:rgba(249, 211, 66, 0.4);*/	
 	}
 	#MorseWeaknesses{
 		border: 1px solid #000000;
-		background:rgba(249, 211, 66, 0.4);
+		/*background:rgba(249, 211, 66, 0.4);*/
 	}
+	
